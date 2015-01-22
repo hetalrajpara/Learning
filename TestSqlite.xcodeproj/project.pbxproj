@@ -14,6 +14,10 @@
 		B3888FB91A6E8BDE00FB803F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3888FB81A6E8BDE00FB803F /* Images.xcassets */; };
 		B3888FBC1A6E8BDE00FB803F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3888FBA1A6E8BDE00FB803F /* LaunchScreen.xib */; };
 		B3888FC81A6E8BDF00FB803F /* TestSqliteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3888FC71A6E8BDF00FB803F /* TestSqliteTests.m */; };
+		B3888FD21A6E8C0D00FB803F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3888FD11A6E8C0D00FB803F /* libsqlite3.0.dylib */; };
+		B3888FD81A6E8CB700FB803F /* QuestionDataBean.m in Sources */ = {isa = PBXBuildFile; fileRef = B3888FD71A6E8CB700FB803F /* QuestionDataBean.m */; };
+		B3888FDC1A6E921900FB803F /* QuestionDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B3888FDB1A6E921900FB803F /* QuestionDatabase.m */; };
+		B3E24ED51A70DDCC008CB18B /* questionsDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = B3E24ED41A70DDCC008CB18B /* questionsDB.sqlite3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		B3888FC11A6E8BDE00FB803F /* TestSqliteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSqliteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3888FC61A6E8BDF00FB803F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3888FC71A6E8BDF00FB803F /* TestSqliteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSqliteTests.m; sourceTree = "<group>"; };
+		B3888FD11A6E8C0D00FB803F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B3888FD61A6E8CB700FB803F /* QuestionDataBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionDataBean.h; path = BeanDatabase/QuestionDataBean.h; sourceTree = "<group>"; };
+		B3888FD71A6E8CB700FB803F /* QuestionDataBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionDataBean.m; path = BeanDatabase/QuestionDataBean.m; sourceTree = "<group>"; };
+		B3888FDA1A6E921900FB803F /* QuestionDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionDatabase.h; path = DB/QuestionDatabase.h; sourceTree = "<group>"; };
+		B3888FDB1A6E921900FB803F /* QuestionDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionDatabase.m; path = DB/QuestionDatabase.m; sourceTree = "<group>"; };
+		B3E24ED41A70DDCC008CB18B /* questionsDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = questionsDB.sqlite3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3888FD21A6E8C0D00FB803F /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,8 @@
 		B3888F9F1A6E8BDE00FB803F = {
 			isa = PBXGroup;
 			children = (
+				B3888FDF1A6E991A00FB803F /* Resources */,
+				B3888FD11A6E8C0D00FB803F /* libsqlite3.0.dylib */,
 				B3888FAA1A6E8BDE00FB803F /* TestSqlite */,
 				B3888FC41A6E8BDF00FB803F /* TestSqliteTests */,
 				B3888FA91A6E8BDE00FB803F /* Products */,
@@ -81,6 +94,8 @@
 		B3888FAA1A6E8BDE00FB803F /* TestSqlite */ = {
 			isa = PBXGroup;
 			children = (
+				B3888FD91A6E920100FB803F /* DB */,
+				B3888FD51A6E8C8400FB803F /* BeanDatabase */,
 				B3888FAF1A6E8BDE00FB803F /* AppDelegate.h */,
 				B3888FB01A6E8BDE00FB803F /* AppDelegate.m */,
 				B3888FB21A6E8BDE00FB803F /* ViewController.h */,
@@ -117,6 +132,32 @@
 				B3888FC61A6E8BDF00FB803F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3888FD51A6E8C8400FB803F /* BeanDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				B3888FD61A6E8CB700FB803F /* QuestionDataBean.h */,
+				B3888FD71A6E8CB700FB803F /* QuestionDataBean.m */,
+			);
+			name = BeanDatabase;
+			sourceTree = "<group>";
+		};
+		B3888FD91A6E920100FB803F /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				B3888FDA1A6E921900FB803F /* QuestionDatabase.h */,
+				B3888FDB1A6E921900FB803F /* QuestionDatabase.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		B3888FDF1A6E991A00FB803F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3E24ED41A70DDCC008CB18B /* questionsDB.sqlite3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +242,7 @@
 			files = (
 				B3888FB71A6E8BDE00FB803F /* Main.storyboard in Resources */,
 				B3888FBC1A6E8BDE00FB803F /* LaunchScreen.xib in Resources */,
+				B3E24ED51A70DDCC008CB18B /* questionsDB.sqlite3 in Resources */,
 				B3888FB91A6E8BDE00FB803F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3888FB41A6E8BDE00FB803F /* ViewController.m in Sources */,
+				B3888FDC1A6E921900FB803F /* QuestionDatabase.m in Sources */,
+				B3888FD81A6E8CB700FB803F /* QuestionDataBean.m in Sources */,
 				B3888FB11A6E8BDE00FB803F /* AppDelegate.m in Sources */,
 				B3888FAE1A6E8BDE00FB803F /* main.m in Sources */,
 			);
@@ -412,6 +456,7 @@
 				B3888FCD1A6E8BDF00FB803F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3888FCE1A6E8BDF00FB803F /* Build configuration list for PBXNativeTarget "TestSqliteTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +465,7 @@
 				B3888FD01A6E8BDF00FB803F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
